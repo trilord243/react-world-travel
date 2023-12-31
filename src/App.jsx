@@ -9,6 +9,7 @@ import { CityList } from "./components/cITYlIST.JSX";
 import { useEffect, useState } from "react";
 import { CountryList } from "./components/CountryList";
 import City from "./components/City";
+import Form from "./components/Form";
 
 const API = "http://localhost:8001/cities"
 
@@ -51,7 +52,7 @@ export default function App() {
           <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />} />
           <Route path="cities/:id" element={<City />} />
           <Route path="countries" element={<CountryList cities={cities} isLoading={isLoading} />} />
-          <Route path="form" element={<h1>Form</h1>} />
+          <Route path="form" element={<Form />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
