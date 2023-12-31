@@ -8,8 +8,9 @@ const API = "http://localhost:8001/cities"
 //Componente provider con su children 
 const CititesProvider = ({ children }) => {
 
-    const [cities, setCities] = useState({})
+    const [cities, setCities] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [currentCity, setCurrentCity] = useState({})
 
     useEffect(() => {
         async function fetchCities() {
@@ -34,7 +35,7 @@ const CititesProvider = ({ children }) => {
 
 
     return (
-        <CitiesContext.Provider value={{ cities, isLoading }}>
+        <CitiesContext.Provider value={{ cities, isLoading, API, currentCity, setCurrentCity }}>
             {children}
         </CitiesContext.Provider>
     )
