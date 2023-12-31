@@ -20,10 +20,10 @@ const formatDate = (date) =>
 
 
 export const CityItem = ({ city }) => {
-    const { deletecity } = useCities()
+    const { deleteCity } = useCities()
     const handleClick = (e) => {
         e.preventDefault()
-        deletecity(id)
+        deleteCity(id)
     }
     const navigate = useNavigate()
     const { cityName, emoji, date, id, position } = city

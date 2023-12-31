@@ -14,7 +14,7 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function City() {
-  const { API, currentCity, setCurrentCity } = useCities()
+  const { currentCity, getCity } = useCities()
 
   const [searchParams, setSearchParams] = useSearchParams()
 
@@ -23,28 +23,14 @@ function City() {
   const lng = searchParams.get("lng")
 
 
-  const fetchCurretnCity = async () => {
-    try {
-      setIsLoading(true)
-      const data = await fetch(`${API}/${id}`)
-      const city = await data.json()
-      setCurrentCity(city)
 
-    } catch (error) {
-      alert("error")
-      console.error(error)
-
-    } finally {
-      setIsLoading(false)
-    }
-  }
 
 
 
   const { id } = useParams()
 
 
-  useEffect(() => { fetchCurretnCity() }, [id, lat, lng])
+  useEffect(() => { getCity(id) }, [id, lat, lng])
 
 
 

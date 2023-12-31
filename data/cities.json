@@ -1,14 +1,14 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2023-12-31T20:26:35.700Z",
-      "notes": "65",
+      "cityName": "Caracas",
+      "country": "Venezuela (Bolivarian Republic of)",
+      "emoji": "🇻🇪",
+      "date": "2023-12-31T21:14:29.958Z",
+      "notes": "4",
       "position": {
-        "lat": "38.76532733447257",
-        "lng": "-9.199676513671877"
+        "lat": "10.435481467871393",
+        "lng": "-66.84957504272462"
       },
       "id": 1
     }
