@@ -14,11 +14,11 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function City() {
-  const { currentCity, getCity } = useCities()
+  const { currentCity, getCity, isLoading } = useCities()
 
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const [isLoading, setIsLoading] = useState(true)
+
   const lat = searchParams.get("lat")
   const lng = searchParams.get("lng")
 

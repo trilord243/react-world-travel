@@ -1,16 +1,28 @@
 {
   "cities": [
     {
+      "cityName": "Sintra",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2023-12-31T21:24:55.035Z",
+      "notes": "asdas",
+      "position": {
+        "lat": "38.768004230175954",
+        "lng": "-9.299583435058596"
+      },
+      "id": 1
+    },
+    {
       "cityName": "Caracas",
       "country": "Venezuela (Bolivarian Republic of)",
       "emoji": "🇻🇪",
-      "date": "2023-12-31T21:14:29.958Z",
-      "notes": "4",
+      "date": "2023-12-31T21:27:39.655Z",
+      "notes": "asd",
       "position": {
-        "lat": "10.435481467871393",
-        "lng": "-66.84957504272462"
+        "lat": "10.50131507073086",
+        "lng": "-66.91497802734376"
       },
-      "id": 1
+      "id": 2
     }
   ]
 }
