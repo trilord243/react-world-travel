@@ -20,6 +20,11 @@ const formatDate = (date) =>
 
 
 export const CityItem = ({ city }) => {
+    const { deletecity } = useCities()
+    const handleClick = (e) => {
+        e.preventDefault()
+        deletecity(id)
+    }
     const navigate = useNavigate()
     const { cityName, emoji, date, id, position } = city
     const { currentCity } = useCities()
@@ -34,7 +39,7 @@ export const CityItem = ({ city }) => {
                 <span className={styles.emoji}  >{emoji}</span>
                 <h3 className={styles.name} >{cityName}</h3>
                 <time className={styles.date} > ({formatDate(date)}) </time>
-                <button className={styles.deleteBtn} >&times; </button>
+                <button onClick={handleClick} className={styles.deleteBtn} >&times; </button>
             </Link>
         </li>
     )
