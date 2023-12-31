@@ -2,8 +2,9 @@ import { CityItem } from './CityItem'
 import styles from './cityList.module.css'
 import Spinner from './Spinner'
 import Message from './Message'
-export const CityList = ({ cities, isLoading }) => {
-    console.log(cities)
+import { useCities } from '../contexts/CitiesContext'
+export const CityList = () => {
+    const { cities, isLoading } = useCities()
 
     if (isLoading) return (<Spinner />)
 
