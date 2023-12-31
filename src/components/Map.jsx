@@ -5,16 +5,16 @@ import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from 're
 import { useCities } from '../contexts/CitiesContext'
 import { useGeolocation } from '../hooks/useGeolocation'
 import Button from './Button'
+import { useUrlPosition } from '../hooks/useUrl.Position'
 
 export const Map = () => {
     const { cities } = useCities()
     const { isLoading: isLoadingPosition, position: geoLocation, getPosition } = useGeolocation()
 
     const [mapPosition, setMapPosition] = useState([38.727881642324164, -9.140900099907554])
-    const [searchParams, setSearchParams] = useSearchParams()
-    const lat = searchParams.get("lat")
-    const lng = searchParams.get("lng")
 
+
+    const [lat, lng] = useUrlPosition()
     useEffect(() => {
         if (lat && lng) {
             setMapPosition([lat, lng])
@@ -66,7 +66,7 @@ function DetectClick() {
     const navigate = useNavigate()
     useMapEvents({
         click: (e) => {
-            console.log(e)
+
             navigate("form?lat=" + e.latlng.lat + "&lng=" + e.latlng.lng + "")
         },
     })
