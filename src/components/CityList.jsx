@@ -3,12 +3,15 @@ import styles from './cityList.module.css'
 import Spinner from './Spinner'
 import Message from './Message'
 import { useCities } from '../contexts/CitiesContext'
+import { useEffect } from 'react'
 export const CityList = () => {
     const { cities, isLoading } = useCities()
 
     if (isLoading) return (<Spinner />)
 
     if (cities.length === 0) return (<Message message='Add yout first city click on the map' />)
+
+    useEffect(() => { }, [cities])
 
 
     return (

@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useReducer, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useReducer } from "react";
 
 //Creat contexto 
 const CitiesContext = createContext()
@@ -6,7 +6,7 @@ const CitiesContext = createContext()
 
 
 //Componente provider con su children 
-const BASE_URL = "http://localhost:8001";
+const BASE_URL = "https://city-server.vercel.app";
 
 const initialState = {
     cities: [],
@@ -28,7 +28,7 @@ function reducer(state, action) {
             };
 
         case "city/loaded":
-            return { ...state, isLoading: false, currentCity: action.payload };
+            return { ...state, isLoading: false, currentCity: [...state.cities, action.payload] };
 
         case "city/created":
             return {
