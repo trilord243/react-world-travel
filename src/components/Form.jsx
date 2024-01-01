@@ -18,7 +18,7 @@ export function convertToEmoji(countryCode) {
     .map((char) => 127397 + char.charCodeAt());
   return String.fromCodePoint(...codePoints);
 }
-function Form() {
+export default function Form() {
 
   const [emoji, setEmoji] = useState("");
   const navigate = useNavigate();
@@ -120,5 +120,3 @@ function Form() {
 
   );
 }
-
-export default Form;

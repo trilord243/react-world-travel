@@ -13,7 +13,7 @@ const formatDate = (date) =>
     weekday: "long",
   }).format(new Date(date));
 
-function City() {
+export default function City() {
   const { currentCity, getCity, isLoading } = useCities()
 
   const [searchParams, setSearchParams] = useSearchParams()
@@ -77,4 +77,3 @@ function City() {
   );
 }
 
-export default City;
