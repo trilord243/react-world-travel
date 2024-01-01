@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Homepage from "./pages/HomePage";
+import Homepage from "./pages/Homepage";
 import Product from "./pages/Product";
 import Pricing from "./pages/Pricing";
 import ProtectedRoute from "./pages/ProtectedRoute";
@@ -10,6 +10,8 @@ import CountryList from "./components/CountryList";
 import Form from "./components/Form";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
+import { AuthProvider } from "./contexts/FakeAuthContext";
+import { CititesProvider } from "./contexts/CitiesContext";
 
 
 
