@@ -9,8 +9,10 @@ export default function ProtectedRoute({ children }) {
     useEffect(() => {
         if (!isAuthenticated) {
             navigate('/', { replace: true });
+        } else {
+            navigate('/app/cities', { replace: true });
         }
-    }, [isAuthenticated, navigate])
+    }, [isAuthenticated])
     if (!isAuthenticated) return null;
     return children;
 }
