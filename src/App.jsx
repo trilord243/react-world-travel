@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Product from "./pages/Product";
-import HomePage from "./pages/HomePage.jsx";
 import Pricing from "./pages/Pricing.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
 import AppLayout from "./pages/AppLayout.jsx";
@@ -12,8 +11,7 @@ import Form from "./components/Form.jsx";
 import { CititesProvider } from "./contexts/CitiesContext.jsx";
 import { AuthProvider } from "./contexts/FakeAuthContext.jsx";
 import { ProtectedRoute } from "./pages/ProtectedRoute.jsx";
-
-
+import Homepage from "./pages/HomePage.jsx";
 
 export default function App() {
 
@@ -30,7 +28,7 @@ export default function App() {
         <BrowserRouter>
 
           <Routes>
-            <Route index element={<HomePage />} />
+            <Route index element={<Homepage />} />
             <Route path="product" element={<Product />} />
             <Route path="pricing" element={<Pricing />} />
             <Route path="/app" element={<ProtectedRoute><AppLayout /></ProtectedRoute>} >

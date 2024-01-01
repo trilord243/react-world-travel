@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Homepage.module.css";
 import PageNav from "../components/PageNav.jsx";
-export default function Homepage() {
+function Homepage() {
   return (
     <main className={styles.homepage}>
       <PageNav />
@@ -23,3 +23,5 @@ export default function Homepage() {
     </main>
   );
 }
+
+export default Homepage;

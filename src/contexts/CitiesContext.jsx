@@ -121,9 +121,9 @@ const CititesProvider = ({ children }) => {
                     "Content-Type": "application/json",
                 },
             });
-            const data = await res.json();
 
-            dispatch({ type: "city/created", payload: data });
+
+            dispatch({ type: "city/created", payload: newCity });
         } catch {
             dispatch({
                 type: "rejected",

@@ -11,7 +11,7 @@ export const CityList = () => {
 
     if (cities.length === 0) return (<Message message='Add yout first city click on the map' />)
 
-    useEffect(() => { }, [cities])
+    console.log(cities)
 
 
     return (
