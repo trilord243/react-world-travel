@@ -3,7 +3,7 @@ import styles from './cityList.module.css'
 import Spinner from './Spinner'
 import Message from './Message'
 import { useCities } from '../contexts/CitiesContext'
-import { useEffect } from 'react'
+
 export const CityList = () => {
     const { cities, isLoading } = useCities()
 

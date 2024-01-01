@@ -4,7 +4,8 @@ import Pricing from "./pages/Pricing.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
 import AppLayout from "./pages/AppLayout.jsx";
 import Login from "./pages/Login";
-import { CityList } from "./components/cITYlIST.JSX";
+
+import { CityList } from "./components/CityList.jsx";
 import { CountryList } from "./components/CountryList.jsx";
 import City from "./components/City.jsx";
 import Form from "./components/Form.jsx";
@@ -12,7 +13,6 @@ import { CititesProvider } from "./contexts/CitiesContext.jsx";
 import { AuthProvider } from "./contexts/FakeAuthContext.jsx";
 import { ProtectedRoute } from "./pages/ProtectedRoute.jsx";
 import Homepage from "./pages/HomePage.jsx";
-
 export default function App() {
 
 
